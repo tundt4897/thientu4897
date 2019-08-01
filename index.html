@@ -1,360 +1,553 @@
-<!doctype html>
-<html>
-<head>
-<meta charset="utf-8">
-<title>Untitled Document</title>
-	<link href="css/main.css" rel="stylesheet">
-	
-	<!--link slider-->
-	<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-	
-	<!--link icon-->
-	<link rel='stylesheet' href='https://use.fontawesome.com/releases/v5.7.0/css/all.css' integrity='sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ' crossorigin='anonymous'>
-	
-	<link rel="stylesheet" href="css/lightbox.min.css">
-	
-	
-</head>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
 
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title>Unisocks- fullPage.js</title>
+	<meta name="author" content="Alvaro Trigo Lopez" />
+	<meta name="description" content="fullPage fixed full-screen backgrounds." />
+	<meta name="keywords"  content="fullpage,jquery,demo,screen,fixed,fullscreen,backgrounds,full-screen" />
+	<meta name="Resource-type" content="Document" />
+	
+	<meta http-equiv="content-type" content="text/html;charset=iso-8859-1" />
+		
+	<meta name="description" value="This 100% width carousel has a fixed height set at 500 pixels, the images fill up the visible area using CSS. With a title and a beautifull fast uncover-fade animation, this carousel would be perfect for a header." />
+		
+	<meta name="keywords" value="responsive, carousel, fast, uncover, fade, jquery" />
+	
+	<meta name="viewport" content="width=device-width, initial-scale=1"/>
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+	<link rel="stylesheet" type="text/css" href="css/fullpage.css" />
+	<link rel="stylesheet" type="text/css" href="css/examples.css" />
+	
+	<link rel="stylesheet" href="css/animate.css"/>
+	
+	<style>
+
+	/* Style for our header texts
+	* --------------------------------------- */
+
+
+	/* Centered texts in each section
+	* --------------------------------------- */
+	.section{
+		text-align:center;
+	}
+
+
+	/* Backgrounds will cover all the section
+	* --------------------------------------- */
+	#section0,
+	#section1,
+	#section2,
+	#section3,
+    #slide1,
+    #slide2{
+		background-size: cover;
+		background-attachment: fixed;
+	}
+
+	/* Defining each sectino background and styles
+	* --------------------------------------- */
+	#section0{
+		background-image: url();
+	}
+	#section0 h1{
+		top: 50%;
+		transform: translateY(-50%);
+		position: relative;
+	}
+	#section2{
+		background-image: url(image/Size.png);
+		padding: 6% 0 0 0;
+		background-size: 2160px 711px;
+		background-repeat: no-repeat;
+	}
+	#section3{
+		
+		padding: 6% 0 0 0;
+	}
+	#section3 h1{
+		color: #000;
+	}
+
+
+	/*Adding background for the slides
+	* --------------------------------------- */
+	#slide1{
+		background-image: url(imgs/bg2.jpg);
+		padding: 6% 0 0 0;
+	}
+	#slide2{
+		background-image: url(imgs/bg5.jpg);
+		padding: 6% 0 0 0;
+	}
+
+
+	/* Bottom menu
+	* --------------------------------------- */
+	#infoMenu li a {
+		color: #fff;
+	}
+	</style>
+
+	<!--[if IE]>
+		<script type="text/javascript">
+			 var console = { log: function() {} };
+		</script>
+	<![endif]-->
+</head>
 <body>
+
 	
-	<div class="outer">
-	  <div class="headTitle">
-			Free Shipping On Orders Over 5$
+	
+		<div class="unisocks">
+			<a href="backgrounds-fixed - Copy.html">UNISOCKS</a>
 		</div>
+	
+		<div class="menu">
+			
+				<ul>
+					<li><a href="Hienenen/html/contact.html">SHOP</a></li>
+					<li><a href="#section2">SIZE GUIDE</a></li>
+					<li><a href="">ABOUT</a></li>
+					<li><a href="#">HELP</a></li>
+					<li><a href="#">REVIEWS</a></li>	
+					<li><a href="#" style="font-size:30px;cursor:pointer" onclick="openNav()">YOUR BOX</a></li>
+				</ul>
+			
+		</div>
+	
+		<div id="mySidenav" class="sidenav">
+		  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+		  <a href="#" style="font-size: 35px;font-family: social gothic;">SHOPPING CART</a>
+		  <a>You are $50.00 away from free shipping in the U.S.</a>
+			<a style="font-size: 25px;font-family: social gothic;">Your cart is empty</a>
+		  <a href="Hienenen/html/contact.html"><button>SHOP NOW</button></a>
 		
+		</div>
+
+
+		
+		
+			
+<div id="fullpage">
+	<div class="section" id="section0">
 		<div class="header">
-			<div class="logo">
-				<a href="#">UNISOCK</a>
+			<div class="logo">	
+				<span style="font-size: 120px; font-weight: 600; color: white; text-shadow: 10px 10px 20px black;">ALL U CAN "SOCKS" !!!</span> <br>
+				<span style="font-size: 30px; font-weight: 300; color: white; text-shadow: 5px 5px 10px black;"><a href="Hienenen/html/contact.html">ALL SOCKS U NEED</a></span>
 			</div>
 			
-			<div class="search">
-				<input class="input">
-				<button class="buttonSearch"><a href="#">SEARCH</a></button>
-			</div>
-			
-			<div class="mycart"><a href="#">My Cart</a></div>
-			<button class="buttonLogin"><a href="#">LOGIN</a></button>
-			
-		</div>
-		
-		<div class="navigation">
-			<ul>
-				<li><a href="#">PRODUCT</a>
-					<ul>
-						<li><a href="#">NO SHOW</a></li>
-						<li><a href="#">ANKLE</a></li>
-						<li><a href="#">QUARTER</a></li>
-						<li><a href="#">CALF</a></li>
-						<li><a href="#">KEE HIGH</a></li>
-					</ul>
-				</li>
-				<li><a href="#">SIZE GUIDE</a></li>
-				<li><a href="#">ABOUT</a></li>
-				<li><a href="#">HELP</a>
-					<ul>
-						<li><a href="#">SHIPPING AND RETURN</a></li>
-						<li><a href="#">CONTACT</a></li>
-					</ul>
-				</li>
-				<li><a href="#">REVIEWS</a></li>
-			</ul>
-		
-		</div>
-		
-		<div class="slider">
-		
-			<div class="w3-content w3-display-container" style="max-width:1380px">
-				
-  				<img class="mySlides" src="image/vo3.jpg" style="width:100%">
-  				<img class="mySlides" src="image/vo2.jpg" style="width:100%">
-	 			<img class="mySlides" src="image/Vo1.jpg" style="width:100%">
-				
-				<div class="w3-center w3-container w3-section w3-large w3-text-white w3-display-bottommiddle" style="width:100%">
-				<div class="w3-left w3-hover-text-khaki" onclick="plusDivs(-1)">&#10094;</div>
-				<div class="w3-right w3-hover-text-khaki" onclick="plusDivs(1)">&#10095;</div>
-				<span class="w3-badge demo w3-border w3-transparent w3-hover-white" onclick="currentDiv(1)"></span>
-				<span class="w3-badge demo w3-border w3-transparent w3-hover-white" onclick="currentDiv(2)"></span>
-				<span class="w3-badge demo w3-border w3-transparent w3-hover-white" onclick="currentDiv(3)"></span>
-  				</div>
-			</div>
-		</div>
-		
-		<div class="support">
-		
-			<div class="support_1">
-				<div class="supportContent">
-					<img src="image/icons8-airport-50.png" width="36px">
-					<a href="#">
-						FREE SHIPPING AND RETURNS<br>
-						Free shipping on orders over 5$
-					</a>
+			<div id="inner">
+				<div id="carousel-fc" class="carousel">
+					<img src="image/gjj.png" width="400" height="300" />
+					<img src="image/ghj.png" width="400" height="300" />
+					<img src="image/fgh.png" width="400" height="300" />
+					<img src="image/123.png" width="400" height="300" />
 				</div>
+				<div id="carousel-zw" class="carousel">
+					<img src="image/gjj.png" width="400" height="300" />
+					<img src="image/ghj.png" width="400" height="300" />
+					<img src="image/fgh.png" width="400" height="300" />
+					<img src="image/123.png" width="400" height="300" />
+				</div>
+				<div id="carousel-txt" class="carousel">
+					<h3>Logo Socks</h3>
+					<h3>Cartoon Socks</h3>
+					<h3>Nightmare Socks</h3>
+					<h3>Lazy Socks</h3>
+				</div>
+				<div id="overlay"></div>
+				<a href="#" id="prev">&lsaquo;</a>
+				<a href="#" id="next">&rsaquo;</a>
 			</div>
-		
-			<div class="support_2">
-				<div class="supportContent">
-					<img src="image/tainghe.png" width="36px">
-					<a href="#">
-						ONLINE SUPPORT<br>
-						We support online 24 hours a day
-					</a>
-				</div>
-			</div>
-		
-			<div class="support_3">
-				<div class="supportContent">
-					<img src="image/vitien.png" width="36px">
-					<a href="#">
-						MONEY GUARANTEE<br>
-						30 days money back guarantee
-					</a>
-				</div>
-			</div>
-		</div>
-		
-		<div class="product">
-			<div class="product_1 borderProduct">
-				PRODUCT
-				<button class="buttonProduct"><i class='fas fa-arrow-right' style='font-size:24px'></i></button>
-				<button class="buttonProduct"><i class='fas fa-arrow-left' style='font-size:24px'></i></button>
-			</div>
-			<div class="FourProduct">
-				
-				<div class="noShow">
-					<img src="image/adsf.png">
-					<p>NO SHOW</p>
-					<span style="color: #1F4A79; font-size: 18px; font-weight: bold">Save Up To 15% with Packs</span>
-				</div>
-				
-				<div class="noShow">
-					<img src="image/product-image-300959905.png">
-					<p>ANKLE</p>
-					<span style="color: #1F4A79; font-size: 18px; font-weight: bold">Save Up To 15% with Packs</span>
-				</div>
-				
-				<div class="noShow">
-					<img src="image/asdf.png">
-					<p>QUARTER</p>
-					<span style="color: #1F4A79; font-size: 18px; font-weight: bold">Save Up To 15% with Packs</span>
-				</div>
-				
-				<div class="noShow">
-					<img src="image/fd.png">
-					<p>KEE HIGH</p>
-					<span style="color: #1F4A79; font-size: 18px; font-weight: bold">Save Up To 15% with Packs</span>
-				</div>
-		
-				
-			</div>
-			
+
+		</div>	
 	
-		</div>
-		
-		<div class="product">
-			<div class="product_1 borderProduct">
-				NEW
-				<button class="buttonProduct"><i class='fas fa-arrow-right' style='font-size:24px'></i></button>
-				<button class="buttonProduct"><i class='fas fa-arrow-left' style='font-size:24px'></i></button>
-			</div>
-			<div class="FourProduct">
-				
-				<div class="new">
-					<a class="example-image-link" href="image/462.png" data-lightbox="example-2" data-title="Optional caption."><img class="example-image" src="image/462.png" alt="image-1"/></a>
-					<h3>FASHION CASUAL SOCKS 5-PACK</h3>
-					<h5>5$ => 4$</h5>
-					<h4>%10 PACK SAVING!</h4>
-				</div>
-				
-				<div class="new">
-					<a class="example-image-link" href="image/123.png" data-lightbox="example-2" data-title="Optional caption."><img class="example-image" src="image/123.png" alt="image-1"/></a>
-					<h3>FASHION CASUAL SOCKS 5-PACK</h3>
-					<h5>5$ => 4$</h5>
-					<h4>%10 PACK SAVING!</h4>
-				</div>
-				
-				<div class="new">
-					<a class="example-image-link" href="image/5456.png" data-lightbox="example-2" data-title="Optional caption."><img class="example-image" src="image/5456.png" alt="image-1"/></a>
-					<h3>FASHION CASUAL SOCKS 5-PACK</h3>
-					<h5>5$ => 4$</h5>
-					<h4>%10 PACK SAVING!</h4>
-				</div>
-				
-				<div class="new">
-					<a class="example-image-link" href="image/898.png" data-lightbox="example-2" data-title="Optional caption."><img class="example-image" src="image/898.png" alt="image-1"/></a>
-					<h3>FASHION CASUAL SOCKS 5-PACK</h3>
-					<h5>5$ => 4$</h5>
-					<h4>%10 PACK SAVING!</h4>
-				</div>
-		
-				
-			</div>
-			
 	
-		</div>
-		
-		<div class="product">
-			<div class="product_1 borderProduct">
-				HOT
-				<button class="buttonProduct"><i class='fas fa-arrow-right' style='font-size:24px'></i></button>
-				<button class="buttonProduct"><i class='fas fa-arrow-left' style='font-size:24px'></i></button>
-			</div>
-			<div class="FourProduct">
-				
-				<div class="new">
-					<a class="example-image-link" href="image/ghj.png" data-lightbox="example-2" data-title="Optional caption."><img class="example-image" src="image/ghj.png" alt="image-1"/></a>
-					
-					<h3>FASHION CASUAL SOCKS 5-PACK</h3>
-					<h5>5$ => 4$</h5>
-					<h4>%10 PACK SAVING!</h4>
-				</div>
-				
-				<div class="new">
-					<a class="example-image-link" href="image/gjj.png" data-lightbox="example-2" data-title="Optional caption."><img class="example-image" src="image/gjj.png" alt="image-1"/></a>
-					
-					<h3>FASHION CASUAL SOCKS 5-PACK</h3>
-					<h5>5$ => 4$</h5>
-					<h4>%10 PACK SAVING!</h4>
-				</div>
-				
-				<div class="new">
-					<a class="example-image-link" href="image/hjhj.png" data-lightbox="example-2" data-title="Optional caption."><img class="example-image" src="image/hjhj.png" alt="image-1"/></a>
-					
-					<h3>FASHION CASUAL SOCKS 5-PACK</h3>
-					<h5>5$ => 4$</h5>
-					<h4>%10 PACK SAVING!</h4>
-				</div>
-				
-				<div class="new">
-					<a class="example-image-link" href="image/fgh.png" data-lightbox="example-2" data-title="Optional caption."><img class="example-image" src="image/fgh.png" alt="image-1"/></a>
-					
-					<h3>FASHION CASUAL SOCKS 5-PACK</h3>
-					<h5>5$ => 4$</h5>
-					<h4>%10 PACK SAVING!</h4>
-				</div>
-		
-				
-			</div>
-			
+ 	</div>
 	
-		</div>
-		
-		<div class="quyen">
-			<div class="product_1 borderProduct">
-				REVIEWS
-				<button class="buttonProduct"><i class='fas fa-arrow-right' style='font-size:24px'></i></button>
-				<button class="buttonProduct"><i class='fas fa-arrow-left' style='font-size:24px'></i></button>
-			</div>
-			<div class="review">
-				<div>
-					<img src="image/quyen.png">
-				</div>
-				<div class="comment">
-					MISS QUYEN
-					<p>“Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.”</p>
-					<h5>READ ALL REVIEWS >></h5>
-					
-				</div>
-				
-			</div>
-			
 	
-		</div>
+	
+	
+	<div class="section">
 		
-		<div class="size">
-			<div class="sizeTitle">
-				<h1>SIZE & GUIDE</h1>
-				<h3>Women’s Socks Size & Fit Guide<br>Men’s Socks Size & Fit Guide</h3>
-				<div class="nutnext">	
-					LEARN MORE
-				</div>
+		
+		
+		<div class="product_1">
+
+			<div class="headerproduct_1">
+				
+			<div class="title">
+				<h3>NO SHOW SOCKS</h3>
+				<a href="Hienenen/html/contact.html"><button>SHOPPING NOW</button></a>
+				
+	
 			</div>
-		</div>
-		
-		<div class="intro">
+	
+			</div>
 			
-			<h3>INTRODUCING THE &nbsp;<span style="font-family: logoFont; font-size: 18px; ">UNISOCKS</span></h3>
-			<h1>LAUNDRY BACK GUARANTEE</h1>
+			<div class="clear"></div>
 		
-		</div>
-		
-		<div class="intro2">
+			<div class="noshow">
 			
-			<h1>OUR GOAL IS TO BRING YOU A PAIR OF COMFORTABLE, COOL SOCKS SUITABLE FOR ALL AGES AND SEX</h1>
-			
-			<h1>GET A PACK OF UNISOCKS TODAY</h1>
-		
-			<div class="buynow">
-			
-				BUY NOW
+				<div class="noshow1" > <a href="Hienenen/html/real.html"><img src="image/summer-mix-grid_cd2318f8-e9c0-47f6-8b86-6f9dbed185bd.png"></a>
+					
+					<h4>LIGHTWEIGHT NO SHOWS 12-PACK</h4>
+				$107
+				
+				</div>
+				<div class="noshow1"><a href="Hienenen/html/real1.html"><img src="image/mixed-grid_5fcc756d-2910-4c39-bfd7-4a5b0a86bfdc.png"></a>
+					<h4>LIGHTWEIGHT NO SHOWS 8-PACK</h4>
+				$107</div>
+				<div class="noshow1"><a href="Hienenen/html/real.html"><img src="image/summer-mix-grid_2d013b8d-302a-48c4-99f2-d11453c3d824.png"></a>
+					<h4>LIGHTWEIGHT NO SHOWS 4-PACK</h4>
+				$107</div>
+				<div class="noshow1"><a href="Hienenen/html/real1.html"><img src="image/heather-grid.jpg_v=1564157217.png"></a>
+					<h4>CUSHIONED NO SHOWS 4-PACK</h4>
+				$107</div>
 				
 			</div>
 			
+		
+		</div>
+	</div>
+		
+	
+	
+	<div class="section">
+		
+		
+		
+		<div class="product_1">
+
+			<div class="headerproduct_2">
+				
+			<div class="title">
+				<h3>ANKLE SOCKS</h3>
+				<a href="Hienenen/html/contact.html"><button>SHOPPING NOW</button></a>
+				
+	
+			</div>
+	
+			</div>
+			
+			<div class="clear"></div>
+		
+			<div class="noshow">
+			
+				<div class="noshow1"><a href="Hienenen/html/real.html"><img src="image/tri-block-grid_fa0346fd-ad6a-4ae4-80a2-71e7d7f9a129.png"></a>
+					<h4>All-Ankle Sock 12-Pack</h4>
+				$122</div>
+				<div class="noshow1"><a href="Hienenen/html/real1.html"><img src="image/summer-mix-grid.png"></a>
+					<h4>Tri-Block Marl Ankle Sock 6-Pack</h4>
+				$68</div>
+				<div class="noshow1"><a href="Hienenen/html/real.html"><img src="image/mixed-spring-grid_b911186e-9db5-4b27-90fd-3f476defa223.png"></a>
+					<h4>Solids Ankle 8-Pack</h4>
+				$86</div>
+				<div class="noshow1"><a href="Hienenen/html/real1.html"><img src="image/mixed-grey-grid_3141f63a-0d16-4899-8856-21d202f2aba1.png"></a>
+					<h4>Originsl Ankle 8-Pack</h4>
+				$107</div>
+				
+			</div>
+			
+		
 		</div>
 	
-		<div class="footer">
-			<div class="footerTitle">
-				<div class="footerProduct">
-					<h5>PRODUCT</h5>
-					<h6>NO SHOW<br>ANKLE<br>QUARTER<br>CALF<br>KNEE HIGH</h6>
-				</div>
-				<div class="footerProduct">
-					<h5>LEARN</h5>
-					<h6>SIZE GUIDE<br>CONTACT US<br>SHIPPING AND RETURNS</h6>
-				</div>
-				<div class="footerProduct">
-					<h5>SUPPORT</h5>
-					<h6>SEARCH<br>ACCOUNT<br>CART</h6>
-				</div>
-				<div class="footerDiachi">
-					<h5>STORE INFO</h5>
-					<img src="image/placeholder.png"><h6>Address: Biên Hòa, Đồng Nai</h6>
-					<img src="image/phone.png"><h6>Phone: 0354 8864 40</h6>
-					<img src="image/clock.png"><h6>We are open: Mn-Sn: 9 am-9 pm</h6>
-					<img src="image/mail.png"><h6>E-mail: tundt4897@gmail.com</h6>
-				</div>
-				<div class="footerLink">
-					<a href="#"><img src="image/fb.png"></a>
-					<a href="#"><img src="image/insta.png"></a>
-					<a href="#"><img src="image/pinter.png"></a>
-					<a href="#"><img src="image/google.png"></a>
-				</div>
+			
+		
+		</div>
+		
+	<div class="section">
+		
+		
+		
+		<div class="product_1">
+
+			<div class="headerproduct_3">
+				
+			<div class="title">
+				<h3>QUARTER SOCKS</h3>
+				<a href="Hienenen/html/contact.html"><button>SHOPPING NOW</button>	</a>
+				
+			
+	
 			</div>
+	
+			</div>
+			
+			<div class="clear"></div>
+		
+			<div class="noshow">
+			
+				<div class="noshow1"><a href="Hienenen/html/real.html"><img src="image/mixed-breezys-grid.png"></a>
+					
+					<h4>No Show 12-Pack</h4>
+				$107
+				
+				</div>
+				<div class="noshow1"><a href="Hienenen/html/real.html"><img src="image/mixed-grid_14ae027c-5dfe-431d-b683-0323cc56fc41.png"></a>
+					
+					<h4>No Show 12-Pack</h4>
+				$107</div>
+				<div class="noshow1"><a href="Hienenen/html/real.html"><img src="image/mixed-grid_b2292258-8c72-45c8-91ea-86e80a2ce367.png"></a>
+					
+					<h4>No Show 12-Pack</h4>
+				$107</div>
+				<div class="noshow1"><a href="Hienenen/html/real1.html"><img src="image/mixed-grid_10c018da-8931-4ce0-8a6f-d5d5cd28edad.png"></a>
+					
+					<h4>No Show 12-Pack</h4>
+				$107</div>
+				
+			</div>
+				
+		</div>
+	
+	</div>
+	
+	
+	<div class="section">
+		
+		<div class="product_1">
+
+			<div class="headerproduct_4">
+				
+			<div class="title">
+				<h3>CALF SOCKS</h3>
+			<a href="Hienenen/html/contact.html"><button>SHOPPING NOW</button></a>
+	
+			</div>
+	
+			</div>
+			
+			<div class="clear"></div>
+		
+			<div class="noshow">
+			
+				<div class="noshow1"><img src="image/mixed-breezys-grid.png">
+					<h4>No Show 12-Pack</h4>
+				$107
+				
+				</div>
+				<div class="noshow1"><img src="image/mixed-grid_14ae027c-5dfe-431d-b683-0323cc56fc41.png">
+					<h4>No Show 12-Pack</h4>
+				$107</div>
+				<div class="noshow1"><img src="image/mixed-grid_b2292258-8c72-45c8-91ea-86e80a2ce367.png">
+					<h4>No Show 12-Pack</h4>
+				$107</div>
+				<div class="noshow1"><img src="image/mixed-grid_10c018da-8931-4ce0-8a6f-d5d5cd28edad.png">
+					<h4>No Show 12-Pack</h4>
+				$107</div>
+				
+			</div>
+			
 		
 		</div>
 		
 	</div>
 	
+	<div class="section">
+		
+		<div class="product_1">
+
+			<div class="headerproduct_5">
+				
+			<div class="title">
+				<h3>KNEE HIGH SOCKS</h3>
+				<a href="Hienenen/html/contact.html"><button>SHOPPING NOW</button></a>
+				
+	
+			</div>
+	
+			</div>
+			
+			<div class="clear"></div>
+		
+			<div class="noshow">
+			
+				<div class="noshow1"><img src="image/mixed-breezys-grid.png">
+					<h4>No Show 12-Pack</h4>
+				$107
+				
+				</div>
+				<div class="noshow1"><img src="image/mixed-grid_14ae027c-5dfe-431d-b683-0323cc56fc41.png">
+					<h4>No Show 12-Pack</h4>
+				$107</div>
+				<div class="noshow1"><img src="image/mixed-grid_b2292258-8c72-45c8-91ea-86e80a2ce367.png">
+					<h4>No Show 12-Pack</h4>
+				$107</div>
+				<div class="noshow1"><img src="image/mixed-grid_10c018da-8931-4ce0-8a6f-d5d5cd28edad.png">
+					<h4>No Show 12-Pack</h4>
+				$107</div>
+				
+			</div>
+			
+		</div>
+		
+	</div>
+	
+	
+	<div class="section" id="section2">
+	
+		<div class="size">
+		<h2 style="font-family: social gothic">WOMEN'S AND MEN'S SOCKS SIZE AND FIT GUIDE</h2>
+
+		<table>
+		  <tr>
+			<th>SHOES SIZE</th>
+			<th>35 36 37 38</th>
+			<th>39 40 41 42</th>
+			<th>43 44 45</th>
+		  </tr>
+		  <tr>
+			<td>SOCKS SIZE</td>
+			<td>S</td>
+			<td>M</td>
+			<td>L</td>
+		  </tr>
+		
+		  
+		</table>
+		</div>
+	</div>
+	
+	<div class="section" id="section3">
+		<div class="footer">
+		Our #1 priority here at Unisocks is your happiness. Which means we stand by our product 100%, no matter what. If you have a problem, we'll solve it. Refund it. Replace your order. Whatever it takes. Just reach out to our Customer Happiness Team. We're here for you.
+		</div>
+	
+		<div class="clear"></div>
+		
+		<div class="footertitle">
+		
+			<ul>Product
+				<li>No Show</li>
+				<li>Ankle</li>
+				<li>Quarter</li>
+				<li>Calf</li>
+				<li>Knee High</li>
+			</ul>
+			<ul>Learn
+				<li>Sizing Guide</li>
+				<li>Contact Us</li>
+				<li>Shipping and Returns</li>
+			</ul>
+			<ul>Support
+				<li>Search</li>
+				<li>Account</li>
+				<li>Cart</li>
+			</ul>
+			<ul>Store Info
+				<li>Address: Biên Hòa, Đông Nai</li>
+				<li>Phone: 0354 8864 40</li>
+				<li>We are open: Mn-Sn: 9 am-9 pm</li>
+				<li>E-mail: tundt4897@gmail.com</li>
+			</ul>
+			<div class="map">
+				<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1958.6622485830649!2d106.87654415809627!3d10.938842198052855!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3174de6f689458bf%3A0xd8ddf41d7d2111dc!2zVW5uYW1lZCBSb2FkLCBMb25nIELDrG5oLCBUaMOgbmggcGjhu5EgQmnDqm4gSMOyYSwgxJDhu5NuZyBOYWksIFZp4buHdCBOYW0!5e0!3m2!1svi!2s!4v1564455687997!5m2!1svi!2s" width="700" height="400" frameborder="0" style="border:0" allowfullscreen></iframe>
+			</div>
+		</div>		
+		
+		<div class="clear"></div>
+		
+		<div class="icon">
+				<i class="fab">&#xf231;</i>
+				<i class="fab">&#xf16d;</i>
+				<i class="fab">&#xf39e;</i>
+				<i class="fab">&#xf099;</i>
+				<i class="fab">&#xf270;</i>
+		</div>
+	
+	</div>
+	
+	
+</div>
+
+		<script type="text/javascript" src="js/fullpage.js"></script>
+		<script type="text/javascript" src="js/examples.js"></script>
+
+		<script type="text/javascript">
+			var myFullpage = new fullpage('#fullpage', {
+				verticalCentered: false,
+
+				//to avoid problems with css3 transforms and fixed elements in Chrome, as detailed here: https://github.com/alvarotrigo/fullPage.js/issues/208
+				css3:false
+			});
+		</script>
+	
+		<script src="http://code.jquery.com/jquery-1.8.2.min.js" type="text/javascript"></script>
+		<script src="coolcarousel (1)/jquery.carouFredSel-6.2.0-packed.js" type="text/javascript"></script>
+		<script type="text/javascript">
+			$(function() {
+				$('#carousel-zw').carouFredSel({
+					auto: false,
+					items: {
+						visible: 1,
+						start: 1
+					}
+				});
+				$('#carousel-txt').carouFredSel({
+					auto: false,
+					items: 1,
+					scroll: {
+						fx: 'fade',
+						duration: 2000
+					}
+				});
+				$('#carousel-fc').carouFredSel({
+					synchronise: [ ['#carousel-zw'], ['#carousel-txt', false] ],
+					items: 1,
+					scroll: {
+						duration: 1000,
+						timeoutDuration: 3000
+					},
+					prev: '#prev',
+					next: '#next'
+				});
+			});
+		</script>
+	
+	
 	<script>
-		var slideIndex = 1;
-		showDivs(slideIndex);
-
-		function plusDivs(n) {
-		  showDivs(slideIndex += n);
+		function openNav() {
+		  document.getElementById("mySidenav").style.width = "600px";
 		}
 
-		function currentDiv(n) {
-		  showDivs(slideIndex = n);
-		}
-
-		function showDivs(n) {
-		  var i;
-		  var x = document.getElementsByClassName("mySlides");
-		  var dots = document.getElementsByClassName("demo");
-		  if (n > x.length) {slideIndex = 1}
-		  if (n < 1) {slideIndex = x.length}
-		  for (i = 0; i < x.length; i++) {
-			x[i].style.display = "none";  
-		  }
-		  for (i = 0; i < dots.length; i++) {
-			dots[i].className = dots[i].className.replace(" w3-white", "");
-		  }
-		  x[slideIndex-1].style.display = "block";  
-		  dots[slideIndex-1].className += " w3-white";
+		function closeNav() {
+		  document.getElementById("mySidenav").style.width = "0";
 		}
 	</script>
 	
-	<script src="js/lightbox-plus-jquery.min.js"></script>
+	
+	
+	<button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
+
+
+
+<script>
+// When the user scrolls down 20px from the top of the document, show the button
+window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+    document.getElementById("myBtn").style.display = "block";
+  } else {
+    document.getElementById("myBtn").style.display = "none";
+  }
+}
+
+// When the user clicks on the button, scroll to the top of the document
+function topFunction() {
+  document.body.scrollTop = 0;
+  document.documentElement.scrollTop = 0;
+}
+</script>
+
+	
+
+	
+
 	
 </body>
 </html>
